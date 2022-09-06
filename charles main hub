@@ -1,16 +1,11 @@
 --[[
- ▄▀▀▀█▀▀▄  ▄▀▀▄▀▀▀▄  ▄▀▀█▄   ▄▀▀▄ █  ▄▀▀█▀▄    ▄▀▀▄ ▀▄  ▄▀▀█▄   ▄▀▀▀▀▄ 
-█    █  ▐ █   █   █ ▐ ▄▀ ▀▄ █  █ ▄▀ █   █  █  █  █ █ █ ▐ ▄▀ ▀▄ █ █   ▐ 
-▐   █     ▐  █▀▀█▀    █▄▄▄█ ▐  █▀▄  ▐   █  ▐  ▐  █  ▀█   █▄▄▄█    ▀▄   
-   █       ▄▀    █   ▄▀   █   █   █     █       █   █   ▄▀   █ ▀▄   █  
- ▄▀       █     █   █   ▄▀  ▄▀   █   ▄▀▀▀▀▀▄  ▄▀   █   █   ▄▀   █▀▀▀   
-█         ▐     ▐   ▐   ▐   █    ▐  █       █ █    ▐   ▐   ▐    ▐      
-▐ 
+ruan esse aq foi pelo visual ent tenta n mecher no codigo
+a partir daqui se tiver bug me avisa    
 ]]
 -- Toggle
 getgenv().Target = true
 -- Configuration
-    getgenv().Key = Enum.KeyCode.C
+    getgenv().Key = Enum.KeyCode.Mouse1
 getgenv().Prediction = 0.1923111
 getgenv().ChatMode = false
 getgenv().NotifMode = true
@@ -26,7 +21,7 @@ getgenv().NotifMode = true
     
     --variables                 
     	local Tracer = Instance.new("Part", game.Workspace)
-    Tracer.Name = "slow é gay"	
+    Tracer.Name = "Charles"	
     Tracer.Anchored = true		
     Tracer.CanCollide = false
     Tracer.Transparency = 0.9
@@ -88,14 +83,14 @@ end)
         	end	
                if getgenv().NotifMode then
     			game.StarterGui:SetCore("SendNotification", {
-        Title = "Tá xitado";
-        Text = "ta lockado no corno do "..tostring(Plr.Character.Humanoid.DisplayName);
+        Title = "Toggle";
+        Text = "Correndo"..tostring(Plr.Character.Humanoid.DisplayName);
     
     })
     end
     elseif not Locking then
          if getgenv().ChatMode then
-        local A_1 = "Unlocked!" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+        local A_1 = "Desativado" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
         	end	
         if getgenv().NotifMode then
                         game.StarterGui:SetCore("SendNotification", {
@@ -105,8 +100,8 @@ end)
                })
            elseif getgenv().Target == false then
                         game.StarterGui:SetCore("SendNotification", {
-                   Title = "",
-                   Text = "ta cego macaco?",
+                   Title = "Toggle",
+                   Text = "Andando",
                    Duration = 5
      
                    })
